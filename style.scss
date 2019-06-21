@@ -1,0 +1,83 @@
+$max-width: 1100px;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    color: #fff;
+    font-size: 62.5%;
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+    }
+    .full-page {
+        height: 100vh;
+        background-image: linear-gradient(to right, #3e3162c9, #4631649a), url("bg-img.jpg");
+        background-position: top top;
+        background-size: cover;
+        .page-text {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .text-heading {
+            font-size: 8rem;
+            margin-bottom: 2rem;
+        }
+        .lead {
+            font-size: 2rem;
+            letter-spacing: 1.2;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+        .btn {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: white;
+            border: 1px solid #fff;
+            padding: 1.5rem 4rem;
+            border-radius: 100px;
+            position: relative;
+            text-transform: uppercase;
+            transition: all 0.4s;
+            &:hover {
+                background: #ffcb36;
+            }
+        }
+        .rocket {
+            position: absolute;
+            transform: translateX(-50px);
+            top: 75%;
+            pointer-events: none;
+            animation: rocket-movement 200s linear infinite both running;
+        }
+        .satel {
+            z-index: 110 !important;
+            position: absolute;
+            top: 60%;
+            right: 5%;
+            will-change: transform;
+            animation: move-satel 1s infinite linear both alternate;
+        }
+    }
+}
+
+@keyframes rocket-movement {
+    100% {
+        transform: translate(1200px, -600px) rotate(-720deg);
+    }
+}
+
+@keyframes move-satel {
+    100% {
+        transform: rotate(180deg);
+    }
+}

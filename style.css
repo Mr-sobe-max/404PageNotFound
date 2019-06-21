@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #fff;
+  font-size: 62.5%;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  list-style: none;
+}
+
+body .full-page {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3e3162c9), to(#4631649a)), url("bg-img.jpg");
+  background-image: linear-gradient(to right, #3e3162c9, #4631649a), url("bg-img.jpg");
+  background-position: top top;
+  background-size: cover;
+}
+
+body .full-page .page-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+body .full-page .text-heading {
+  font-size: 8rem;
+  margin-bottom: 2rem;
+}
+
+body .full-page .lead {
+  font-size: 2rem;
+  letter-spacing: 1.2;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+body .full-page .btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  border: 1px solid #fff;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .full-page .btn:hover {
+  background: #ffcb36;
+}
+
+body .full-page .rocket {
+  position: absolute;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  top: 75%;
+  pointer-events: none;
+  -webkit-animation: rocket-movement 200s linear infinite both running;
+          animation: rocket-movement 200s linear infinite both running;
+}
+
+body .full-page .satel {
+  z-index: 110 !important;
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  will-change: transform;
+  -webkit-animation: move-satel 1s infinite linear both alternate;
+          animation: move-satel 1s infinite linear both alternate;
+}
+
+@-webkit-keyframes rocket-movement {
+  100% {
+    -webkit-transform: translate(1200px, -600px) rotate(-720deg);
+            transform: translate(1200px, -600px) rotate(-720deg);
+  }
+}
+
+@keyframes rocket-movement {
+  100% {
+    -webkit-transform: translate(1200px, -600px) rotate(-720deg);
+            transform: translate(1200px, -600px) rotate(-720deg);
+  }
+}
+
+@-webkit-keyframes move-satel {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes move-satel {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
